@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container img {
+    width: 20vw;
+    height: 10vh;
+    /* box-shadow: 10px 10px 10px red;
+     */
+     filter: drop-shadow(10px 10px 10px grey);
+}
+
+.arrow1 {
+    position: relative;
+    left: 0;
+}
+
+.arrow2 {
+    position: relative;
+    right: 0;
+}
+
+.animate_1 {
+    animation: attack1 5s linear infinite forwards;
+}
+
+.animate_2 {
+    animation: attack2 5s linear infinite forwards;
+}
+
+@keyframes attack1 {
+    0% {
+        left: 0;
+    }
+
+    30% {
+        left: 30%;
+    }
+    70% {
+        left: 30%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes attack2 {
+    0% {
+        right: 0;
+    }
+
+    30% {
+        right: 30%;
+    }
+    70% {
+        right: 30%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.shakti_1 {
+    /* background-color: red; */
+    border-radius: 50%;
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    right: -1%;
+    top: 16%;
+    opacity: 0.9;
+    z-index: -1;
+    animation: GFG 0.8s infinite linear;
+}
+
+.shakti_1::after,
+.shakti_1:before{
+    content: "";
+    background-color:inherit;
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.shakti_1::after {
+    animation: bumble 2s ease-out infinite;
+}
+
+.shakti_1:before {
+    animation: bumble 2s 1s ease-out infinite;
+}
+
+@keyframes bumble {
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+.shakti_2 {
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    left: -1%;
+    top: 16%;
+    opacity: 0.9;
+    z-index: -1;
+    animation: GFG 0.8s infinite linear;
+}
+@keyframes GFG {
+    0% {
+        transform: rotate(0deg) 
+              translateY(5px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) 
+              translateY(5px) rotate(-360deg);
+    }
+}
+
+.shakti_2::after,
+.shakti_2:before{
+    content: "";
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.shakti_2::after {
+    animation: bumble 2s ease-out infinite;
+}
+
+.shakti_2:before {
+    animation: bumble 2s 1s ease-out infinite;
+}
+
+@keyframes bumble {
+    100% {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+.button{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 250px;
+    height: 40px;
+    font-size: 22px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color:rgb(92, 18, 18);
+    color: aliceblue;
+    box-shadow: 10px 10px 10px black;
+}
